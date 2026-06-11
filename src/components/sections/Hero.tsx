@@ -4,14 +4,20 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="pt-[76px] pb-[96px] px-12 overflow-hidden"
-      style={{ background: 'var(--cream)' }}
+      className="overflow-hidden"
+      style={{
+        background: 'var(--cream)',
+        paddingTop: '76px',
+        paddingBottom: '96px',
+        paddingLeft: 'clamp(20px, 5vw, 48px)',
+        paddingRight: 'clamp(20px, 5vw, 48px)',
+      }}
     >
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[72px] items-center" style={{ gridTemplateColumns: '1.05fr 0.95fr' }}>
+        <div className="flex flex-col md:flex-row gap-12 md:gap-[72px] items-center">
 
           {/* ── Left: Copy ── */}
-          <div>
+          <div className="flex-1">
             <p
               className="mb-6 inline-flex items-center gap-3"
               style={{
@@ -30,7 +36,7 @@ export function Hero() {
               style={{
                 fontFamily: 'var(--font-bricolage)',
                 fontWeight: 800,
-                fontSize: 'clamp(52px, 7vw, 96px)',
+                fontSize: 'clamp(40px, 7vw, 96px)',
                 lineHeight: 1.02,
                 letterSpacing: '-0.025em',
                 color: 'var(--navy)',
@@ -45,7 +51,7 @@ export function Hero() {
             <p
               className="mt-7"
               style={{
-                fontSize: '20px',
+                fontSize: 'clamp(16px, 2vw, 20px)',
                 lineHeight: 1.5,
                 color: 'var(--ink-60)',
                 maxWidth: '520px',
@@ -63,12 +69,12 @@ export function Hero() {
               style={{ borderTop: '1px solid var(--line)' }}
             >
               {[
-                { num: '2-5m',  lbl: 'Transfer speed' },
-                { num: '54',    lbl: 'African countries' },
-                { num: '₦0',    lbl: 'Monthly fees' },
+                { num: '2-5m', lbl: 'Transfer speed' },
+                { num: '54',   lbl: 'African countries' },
+                { num: '₦0',   lbl: 'Monthly fees' },
               ].map((s) => (
                 <div key={s.lbl}>
-                  <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '28px', lineHeight: 1, color: 'var(--navy)', letterSpacing: '-0.02em' }}>
+                  <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: 'clamp(20px, 3vw, 28px)', lineHeight: 1, color: 'var(--navy)', letterSpacing: '-0.02em' }}>
                     {s.num}
                   </p>
                   <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink-60)', marginTop: '6px' }}>
@@ -79,17 +85,17 @@ export function Hero() {
             </div>
           </div>
 
-          {/* ── Right: Phone mock ── */}
+          {/* ── Right: Phone mock — hidden on mobile ── */}
           <div
-            className="relative flex justify-center items-center"
+            className="relative justify-center items-center hidden md:flex"
             style={{
               aspectRatio: '4/5',
               maxHeight: '640px',
               padding: '40px 60px',
               overflow: 'visible',
+              minWidth: '340px',
             }}
           >
-
             {/* Background blob */}
             <div
               aria-hidden="true"
@@ -182,27 +188,23 @@ export function Hero() {
                 {/* Scroll area */}
                 <div style={{ flex: 1, overflowY: 'auto', padding: '14px 14px 0' }}>
 
-                  {/* Account number */}
                   <div style={{ background: 'white', borderRadius: '12px', border: '1.5px solid #DDE6F0', padding: '12px 14px', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <span style={{ fontSize: '14px', opacity: 0.4 }}>💳</span>
                     <span style={{ fontFamily: 'var(--font-mono)', fontSize: '13px', color: 'var(--navy)', fontWeight: 600 }}>2111262760</span>
                   </div>
 
-                  {/* Recipient name */}
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '10px', fontWeight: 700, color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '5px' }}>Recipient Full Name</p>
                   <div style={{ background: 'white', borderRadius: '12px', border: '1.5px solid #DDE6F0', padding: '12px 14px', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <span style={{ fontSize: '14px', opacity: 0.4 }}>👤</span>
                     <span style={{ fontSize: '13px', color: 'var(--navy)', fontWeight: 500 }}>Jane Doe</span>
                   </div>
 
-                  {/* Bank name */}
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '10px', fontWeight: 700, color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '5px' }}>Recipient Bank Name</p>
                   <div style={{ background: 'white', borderRadius: '12px', border: '1.5px solid #DDE6F0', padding: '12px 14px', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <span style={{ fontSize: '14px', opacity: 0.4 }}>🏦</span>
                     <span style={{ fontSize: '13px', color: 'var(--navy)', fontWeight: 500 }}>Equity Bank</span>
                   </div>
 
-                  {/* Transfer summary */}
                   <div style={{ background: 'white', borderRadius: '14px', padding: '14px', marginBottom: '14px' }}>
                     <p style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', fontWeight: 700, color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '10px' }}>Transfer Summary</p>
                     {[
@@ -224,7 +226,6 @@ export function Hero() {
                   </div>
                 </div>
 
-                {/* Confirm button */}
                 <div style={{ padding: '12px 14px 20px', background: '#F2F5F9' }}>
                   <div style={{ width: '100%', height: '44px', borderRadius: '999px', background: 'linear-gradient(135deg, var(--teal), var(--teal-deep))', display: 'grid', placeItems: 'center', color: 'white', fontFamily: 'var(--font-bricolage)', fontWeight: 800, fontSize: '14px' }}>
                     Confirm Transfer

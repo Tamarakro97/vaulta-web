@@ -2,15 +2,21 @@
 
 export function AfricaPay() {
   return (
-    <section id="africapay" className="py-[120px] px-12" style={{ background: 'var(--navy)' }}>
+    <section
+      id="africapay"
+      style={{
+        background: 'var(--navy)',
+        paddingTop: '80px',
+        paddingBottom: '80px',
+        paddingLeft: 'clamp(20px, 5vw, 48px)',
+        paddingRight: 'clamp(20px, 5vw, 48px)',
+      }}
+    >
       <div className="max-w-[1280px] mx-auto">
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
-          style={{ gridTemplateColumns: '1fr 0.85fr' }}
-        >
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
 
           {/* ── Left: Copy ── */}
-          <div>
+          <div className="flex-1">
             <p
               className="mb-6 inline-flex items-center gap-3"
               style={{
@@ -29,7 +35,7 @@ export function AfricaPay() {
               style={{
                 fontFamily: 'var(--font-bricolage)',
                 fontWeight: 800,
-                fontSize: 'clamp(52px, 7vw, 96px)',
+                fontSize: 'clamp(40px, 7vw, 96px)',
                 lineHeight: 1.02,
                 letterSpacing: '-0.025em',
                 color: 'var(--cream)',
@@ -44,7 +50,7 @@ export function AfricaPay() {
             <p
               className="mt-7"
               style={{
-                fontSize: '20px',
+                fontSize: 'clamp(16px, 2vw, 20px)',
                 lineHeight: 1.5,
                 color: 'rgba(246,240,230,0.65)',
                 maxWidth: '520px',
@@ -68,7 +74,6 @@ export function AfricaPay() {
                   fontWeight: 600,
                   fontSize: '16px',
                   textDecoration: 'none',
-                  transition: 'transform 150ms',
                 }}
               >
                 Open your account →
@@ -103,7 +108,7 @@ export function AfricaPay() {
                 { num: '54',       lbl: 'Countries via Africa Pay' },
               ].map((s) => (
                 <div key={s.lbl}>
-                  <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '28px', lineHeight: 1, color: 'var(--cream)', letterSpacing: '-0.02em' }}>
+                  <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 28px)', lineHeight: 1, color: 'var(--cream)', letterSpacing: '-0.02em' }}>
                     {s.num}
                   </p>
                   <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(246,240,230,0.5)', marginTop: '6px' }}>
@@ -114,17 +119,17 @@ export function AfricaPay() {
             </div>
           </div>
 
-          {/* ── Right: Phone mock — balance/home screen ── */}
+          {/* ── Right: Phone mock — hidden on mobile ── */}
           <div
-            className="relative flex justify-center items-center"
+            className="relative justify-center items-center hidden md:flex"
             style={{
               aspectRatio: '4/5',
               maxHeight: '580px',
               padding: '40px 60px',
               overflow: 'visible',
+              minWidth: '320px',
             }}
           >
-
             {/* Background blob */}
             <div
               aria-hidden="true"
@@ -207,7 +212,6 @@ export function AfricaPay() {
                   overflow: 'hidden',
                 }}
               >
-                {/* Header */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div>
                     <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '15px', letterSpacing: '-0.01em', color: 'var(--navy)', lineHeight: 1.1 }}>Good morning, Tobi</p>
@@ -216,7 +220,6 @@ export function AfricaPay() {
                   <div style={{ width: '30px', height: '30px', borderRadius: '50%', background: 'var(--peach)', border: '2px solid var(--cream)', display: 'grid', placeItems: 'center', fontFamily: 'var(--font-bricolage)', fontWeight: 600, fontSize: '11px', color: 'var(--navy)' }}>T</div>
                 </div>
 
-                {/* Balance card */}
                 <div style={{ marginTop: '14px', background: 'var(--navy)', borderRadius: '20px', padding: '16px', color: 'var(--cream)', position: 'relative', overflow: 'hidden' }}>
                   <div style={{ position: 'absolute', right: '-25px', top: '-25px', width: '120px', height: '120px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(63,208,212,0.5) 0%, transparent 70%)' }} />
                   <p style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', letterSpacing: '0.10em', textTransform: 'uppercase', opacity: 0.6 }}>Total balance</p>
@@ -229,7 +232,6 @@ export function AfricaPay() {
                   </div>
                 </div>
 
-                {/* Quick actions */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '6px', marginTop: '12px' }}>
                   {[
                     { icon: '＋', label: 'Add' },
@@ -244,7 +246,6 @@ export function AfricaPay() {
                   ))}
                 </div>
 
-                {/* Recent activity */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '14px', marginBottom: '4px' }}>
                   <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 600, fontSize: '12px', color: 'var(--navy)' }}>Recent activity</p>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '10px', color: 'var(--ink-60)' }}>This week</p>

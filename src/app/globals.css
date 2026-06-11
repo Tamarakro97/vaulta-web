@@ -70,3 +70,10 @@
   .animate-floatA,
   .animate-floatB { animation: none; }
 }
+
+@media (max-width: 768px) {
+  .wrap-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}

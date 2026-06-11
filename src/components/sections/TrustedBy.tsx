@@ -3,13 +3,27 @@ export function TrustedBy() {
   const doubled = [...logos, ...logos]
 
   return (
-    <section className="py-16 bg-[#101A33] border-y border-white/5 overflow-hidden">
-      <p className="text-center text-white/30 text-sm mb-10 tracking-wide">
-        Trusted by thousands of businesses, freelancers, and fintechs across Africa.
+    <section
+      className="overflow-hidden"
+      style={{
+        background: 'var(--cream)',
+        borderTop: '1px solid var(--line)',
+        borderBottom: '1px solid var(--line)',
+        padding: '28px 0',
+      }}
+    >
+      <p
+        className="text-center mb-6"
+        style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-60)', paddingLeft: '20px', paddingRight: '20px' }}
+      >
+        Banking partners &amp; security
       </p>
-      <div className="flex animate-marquee whitespace-nowrap">
+      <div className="flex animate-marquee whitespace-nowrap" aria-hidden="true">
         {doubled.map((logo, i) => (
-          <span key={i} className="inline-flex items-center mx-10 text-white/20 font-semibold text-lg tracking-tight">
+          <span
+            key={i}
+            style={{ display: 'inline-flex', alignItems: 'center', margin: '0 40px', fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '18px', letterSpacing: '-0.02em', color: 'var(--navy)', opacity: 0.55 }}
+          >
             {logo}
           </span>
         ))}

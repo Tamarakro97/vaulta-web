@@ -24,27 +24,27 @@ export function AfricaPay() {
                 fontSize: '12px',
                 letterSpacing: '0.12em',
                 textTransform: 'uppercase',
-                color: 'rgba(246,240,230,0.6)',
+                color: 'var(--teal)',
               }}
             >
-              <span style={{ width: '22px', height: '1px', background: 'var(--cream)', opacity: 0.5, display: 'inline-block' }} />
-              A warmer way to bank · Est. 2025
+              <span style={{ width: '22px', height: '1px', background: 'var(--teal)', opacity: 0.5, display: 'inline-block' }} />
+              One Africa, one market
             </p>
 
             <h2
               style={{
                 fontFamily: 'var(--font-bricolage)',
                 fontWeight: 800,
-                fontSize: 'clamp(40px, 7vw, 96px)',
-                lineHeight: 1.02,
+                fontSize: 'clamp(36px, 6vw, 64px)',
+                lineHeight: 1.05,
                 letterSpacing: '-0.025em',
                 color: 'var(--cream)',
                 margin: 0,
               }}
             >
-              Money that<br />
-              feels like{' '}
-              <span style={{ fontStyle: 'italic', color: 'var(--teal)' }}>home.</span>
+              Borders for maps,<br />
+              not for{' '}
+              <span style={{ fontStyle: 'italic', color: 'var(--teal)' }}>money.</span>
             </h2>
 
             <p
@@ -53,49 +53,27 @@ export function AfricaPay() {
                 fontSize: 'clamp(16px, 2vw, 20px)',
                 lineHeight: 1.5,
                 color: 'rgba(246,240,230,0.65)',
-                maxWidth: '520px',
+                maxWidth: '480px',
               }}
             >
-              Vaulta is the everyday account, savings vault, and money companion built for real life — not the trading floor. Spend kindly, save quietly, grow steadily.
+              No SWIFT delays, no 8% FX loss. Pick a corridor, enter your amount — your trade settles across the continent in 2–5 minutes.
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-9">
-              <a
-                href="#cta"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  height: '54px',
-                  padding: '0 28px',
-                  borderRadius: '9999px',
-                  background: 'var(--cream)',
-                  color: 'var(--navy)',
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 600,
-                  fontSize: '16px',
-                  textDecoration: 'none',
-                }}
-              >
-                Open your account →
-              </a>
-              <a
-                href="#how"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  height: '54px',
-                  padding: '0 28px',
-                  borderRadius: '9999px',
-                  border: '1.5px solid rgba(246,240,230,0.25)',
-                  color: 'var(--cream)',
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 600,
-                  fontSize: '16px',
-                  textDecoration: 'none',
-                }}
-              >
-                See how it works
-              </a>
+            <div className="flex flex-col gap-6 mt-9">
+              {[
+                { n: '01', text: 'Pick your destination country' },
+                { n: '02', text: 'Enter amount and recipient details' },
+                { n: '03', text: 'Trade settles in 2–5 minutes' },
+              ].map((step) => (
+                <div key={step.n} className="flex gap-5 items-start">
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--teal)', fontWeight: 600, letterSpacing: '0.08em', paddingTop: '2px', minWidth: '28px' }}>
+                    {step.n}
+                  </span>
+                  <p style={{ fontSize: '15px', color: 'rgba(246,240,230,0.75)', lineHeight: 1.5 }}>
+                    {step.text}
+                  </p>
+                </div>
+              ))}
             </div>
 
             <div
@@ -103,9 +81,9 @@ export function AfricaPay() {
               style={{ borderTop: '1px solid rgba(246,240,230,0.12)' }}
             >
               {[
-                { num: '12% p.a.', lbl: 'Interest on savings' },
-                { num: '₦0',       lbl: 'Monthly fees' },
-                { num: '54',       lbl: 'Countries via Africa Pay' },
+                { num: '54',    lbl: 'African countries' },
+                { num: '2-5m',  lbl: 'Average settlement' },
+                { num: '₦250',  lbl: 'Flat fee, no surprises' },
               ].map((s) => (
                 <div key={s.lbl}>
                   <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: 'clamp(18px, 3vw, 28px)', lineHeight: 1, color: 'var(--cream)', letterSpacing: '-0.02em' }}>
@@ -157,11 +135,11 @@ export function AfricaPay() {
               }}
             >
               <div style={{ width: '34px', height: '34px', borderRadius: '50%', background: 'rgba(63,208,212,0.2)', display: 'grid', placeItems: 'center', fontSize: '16px' }}>
-                🔒
+                🇰🇪
               </div>
               <div>
-                <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '13px', lineHeight: 1.1, color: 'var(--navy)' }}>Vault locked</p>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '2px' }}>Earning 12% p.a.</p>
+                <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '13px', lineHeight: 1.1, color: 'var(--navy)' }}>Trade settled</p>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '2px' }}>NGN → KES · 3 minutes</p>
               </div>
             </div>
 
@@ -179,11 +157,11 @@ export function AfricaPay() {
               }}
             >
               <div style={{ width: '34px', height: '34px', borderRadius: '50%', background: 'var(--peach-soft)', display: 'grid', placeItems: 'center', fontSize: '16px' }}>
-                📈
+                🇬🇭
               </div>
               <div>
-                <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '13px', lineHeight: 1.1, color: 'var(--navy)' }}>+₦148k this week</p>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '2px' }}>Auto-saved · no effort</p>
+                <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '13px', lineHeight: 1.1, color: 'var(--navy)' }}>54 countries</p>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '2px' }}>One connected market</p>
               </div>
             </div>
 
@@ -252,13 +230,13 @@ export function AfricaPay() {
                 </div>
 
                 {[
-                  { ico: '↓', bg: 'rgba(63,208,212,0.18)', color: 'var(--teal-deep)', name: 'Africa Pay Transfer', cat: 'Income',        amt: '+₦45,000', pos: true  },
-                  { ico: 'A', bg: 'var(--cream-2)',         color: 'var(--navy)',      name: 'Airtime — MTN',      cat: 'Airtime · Mon',  amt: '–₦2,000',  pos: false },
-                  { ico: 'R', bg: 'var(--peach-soft)',      color: 'var(--navy)',      name: 'Rent Payment',       cat: 'Housing · Sun',  amt: '–₦85,000', pos: false },
-                  { ico: '↺', bg: 'var(--cream-2)',         color: 'var(--navy)',      name: 'Auto-save → Vault',  cat: 'Round-up · Sat', amt: '–₦5,000',  pos: false },
+                  { ico: '🇰🇪', bg: 'rgba(63,208,212,0.18)', color: 'var(--teal-deep)', name: 'Trade — Nairobi Supplier', cat: 'Settled',        amt: '+₦45,000', pos: true  },
+                  { ico: '🇬🇭', bg: 'var(--cream-2)',         color: 'var(--navy)',      name: 'Trade — Accra Buyer',    cat: 'Settled · Mon',  amt: '+₦82,000', pos: true },
+                  { ico: 'R',   bg: 'var(--peach-soft)',      color: 'var(--navy)',      name: 'Rent Payment',           cat: 'Housing · Sun',  amt: '–₦85,000', pos: false },
+                  { ico: '🇿🇦', bg: 'var(--cream-2)',         color: 'var(--navy)',      name: 'Trade — Cape Town Supplier', cat: 'Settled · Sat', amt: '–₦5,000',  pos: false },
                 ].map((tx) => (
                   <div key={tx.name} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 0', borderBottom: '1px solid var(--line)' }}>
-                    <div style={{ width: '28px', height: '28px', borderRadius: '9px', background: tx.bg, color: tx.color, display: 'grid', placeItems: 'center', fontSize: '11px', fontFamily: 'var(--font-bricolage)', fontWeight: 700, flexShrink: 0 }}>{tx.ico}</div>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '9px', background: tx.bg, color: tx.color, display: 'grid', placeItems: 'center', fontSize: '13px', fontFamily: 'var(--font-bricolage)', fontWeight: 700, flexShrink: 0 }}>{tx.ico}</div>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <p style={{ fontSize: '10px', fontWeight: 600, color: 'var(--navy)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{tx.name}</p>
                       <p style={{ fontFamily: 'var(--font-mono)', fontSize: '8px', color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>{tx.cat}</p>

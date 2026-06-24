@@ -7,7 +7,7 @@ import { TrustedBy }    from '@/components/sections/TrustedBy'
 import { Features }     from '@/components/sections/Features'
 import { ComparisonTool } from '@/components/sections/ComparisonTool'  // rename this to Calculator.tsx
 import { HowItWorks }   from '@/components/sections/HowItWorks'
-import { Testimonial } from '@/components/sections/Testimonial'
+// import { Testimonial } from '@/components/sections/Testimonial'
 import { AfricaPay }     from '@/components/sections/AfricaPay'
 import { Calculator } from '@/components/sections/Calculator'
 import { Security }      from '@/components/sections/Security'
@@ -23,7 +23,7 @@ export default function Home() {
       <Features />
       <ComparisonTool />
       <HowItWorks />
-      <Testimonial/>
+      {/* <Testimonial/> */}
       <AfricaPay />
       <Calculator />
       <Security />

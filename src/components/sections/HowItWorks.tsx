@@ -7,14 +7,14 @@ const steps = [
     body: 'ID and a few taps. No paperwork, no branch visits, no "we\'ll get back to you."',
   },
   {
-    number: '02 · Settle in',
-    heading: 'Move money in, set up wallets.',
-    body: 'Deposit via debit card or bank transfer. Name a savings goal, set an auto-save amount.',
+    number: '02 · Connect',
+    heading: 'Add your trade corridors.',
+    body: 'Pick the countries you trade with. Save recipient details once, reuse them every time.',
   },
   {
-    number: '03 · Watch it work',
-    heading: 'Get on with the rest of your life.',
-    body: 'We\'ll check in every week with a friendly summary. You\'ll wonder why this took so long.',
+    number: '03 · Trade',
+    heading: 'Send, receive, settle — instantly.',
+    body: 'Money moves across borders in 2–5 minutes. No SWIFT delays, no hidden cuts.',
   },
 ]
 
@@ -35,12 +35,12 @@ export function HowItWorks() {
         <div className="flex flex-col md:flex-row gap-8 md:gap-20 items-end mb-[72px]">
           <div className="flex-1">
             <h2 style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: 'clamp(28px, 3.5vw, 56px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: 'var(--navy)', margin: 0 }}>
-              Three small steps.<br />One steady result.
+              Three small steps.<br />One connected market.
             </h2>
           </div>
           <div className="flex-1">
             <p style={{ fontSize: 'clamp(15px, 2vw, 20px)', lineHeight: 1.5, color: 'var(--ink-60)', maxWidth: '400px' }}>
-              Sign-up takes about four minutes from your phone. The rest is just life — happening, with a little more breathing room.
+              Sign-up takes about four minutes from your phone. After that, Africa trades like one market.
             </p>
           </div>
         </div>

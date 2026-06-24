@@ -2,9 +2,6 @@
 
 const links = {
   Product:   ['Wallet', 'Africa Pay', 'Vault', 'Cards'],
-  Company:   ['About', 'Careers', 'Press', 'Blog'],
-  Resources: ['Help center', 'Security', 'Status', 'Contact'],
-  Legal:     ['Terms', 'Privacy', 'Disclosures', 'NDIC'],
 }
 
 export function Footer() {

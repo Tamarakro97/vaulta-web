@@ -32,10 +32,10 @@ export function CTABanner() {
                 Open in under 4 minutes
               </p>
               <h2 style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: 'clamp(28px, 4vw, 56px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: 'var(--cream)', margin: '0 0 16px' }}>
-                Make today the day money felt easier.
+                Make today the day Africa felt like one market.
               </h2>
               <p style={{ fontSize: 'clamp(15px, 2vw, 18px)', lineHeight: 1.6, color: 'rgba(246,240,230,0.75)', marginBottom: '32px', maxWidth: '480px' }}>
-                Join 180,000+ members who&apos;ve put their money somewhere it can finally breathe. No fees, no minimums, no fine-print regrets.
+                Join 180,000+ businesses and traders moving money across Africa in minutes, not days. No fees, no minimums, no fine-print regrets.
               </p>
 
               {/* Email form */}

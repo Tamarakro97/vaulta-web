@@ -29,23 +29,23 @@ export function Hero() {
               }}
             >
               <span style={{ width: '22px', height: '1px', background: 'var(--navy)', opacity: 0.5, display: 'inline-block' }} />
-              Intra-African payments · Est. 2025
+              A warmer way to move money across Africa · Est. 2025
             </p>
 
             <h1
               style={{
                 fontFamily: 'var(--font-bricolage)',
                 fontWeight: 800,
-                fontSize: 'clamp(40px, 7vw, 96px)',
-                lineHeight: 1.02,
+                fontSize: 'clamp(40px, 7vw, 88px)',
+                lineHeight: 1.04,
                 letterSpacing: '-0.025em',
                 color: 'var(--navy)',
                 margin: 0,
               }}
             >
-              Send money<br />
-              across Africa,{' '}
-              <span style={{ fontStyle: 'italic', color: 'var(--moss)' }}>instantly.</span>
+              Trade across Africa<br />
+              like it&apos;s{' '}
+              <span style={{ fontStyle: 'italic', color: 'var(--moss)' }}>one market.</span>
             </h1>
 
             <p
@@ -57,11 +57,12 @@ export function Hero() {
                 maxWidth: '520px',
               }}
             >
-              Vaulta moves your money across 54 African countries in 2–5 minutes — no SWIFT delays, no hidden FX fees, no branch queues. Banking that finally feels like home.
+              Vaulta is the unified platform for intra-African trade — the everyday account and money companion that lets businesses and individuals send, receive, and settle across borders in minutes. Trade boldly, settle instantly, grow across the continent.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-9">
-              <Button variant="primary" size="lg">Send money now →</Button>
+              <Button variant="primary" size="lg">Open your account →</Button>
+              <Button variant="ghost" size="lg">See how it works</Button>
             </div>
 
             <div
@@ -69,9 +70,9 @@ export function Hero() {
               style={{ borderTop: '1px solid var(--line)' }}
             >
               {[
-                { num: '2-5m', lbl: 'Transfer speed' },
-                { num: '54',   lbl: 'African countries' },
-                { num: '₦0',   lbl: 'Monthly fees' },
+                { num: '54',    lbl: 'Countries, one connected account' },
+                { num: '2-5m',  lbl: 'Average settlement' },
+                { num: '₦0',    lbl: 'Monthly fees' },
               ].map((s) => (
                 <div key={s.lbl}>
                   <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: 'clamp(20px, 3vw, 28px)', lineHeight: 1, color: 'var(--navy)', letterSpacing: '-0.02em' }}>
@@ -127,8 +128,8 @@ export function Hero() {
                 ⚡
               </div>
               <div>
-                <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '14px', lineHeight: 1.1, color: 'var(--navy)' }}>Transfer sent</p>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '2px' }}>Arrived in 3 minutes</p>
+                <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '14px', lineHeight: 1.1, color: 'var(--navy)' }}>Trade settled</p>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '2px' }}>NGN → KES in 3 minutes</p>
               </div>
             </div>
 
@@ -150,7 +151,7 @@ export function Hero() {
               </div>
               <div>
                 <p style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '14px', lineHeight: 1.1, color: 'var(--navy)' }}>54 countries</p>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '2px' }}>No hidden fees</p>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--ink-60)', textTransform: 'uppercase', letterSpacing: '0.08em', marginTop: '2px' }}>One connected market</p>
               </div>
             </div>
 

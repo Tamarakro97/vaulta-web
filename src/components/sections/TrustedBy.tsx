@@ -1,6 +1,19 @@
 export function TrustedBy() {
-  const logos = ['CBN Licensed', 'NDIC Insured', 'Flutterwave', 'Paystack', 'ISO 27001', 'Africa Pay']
-  const doubled = [...logos, ...logos]
+  const countries = [
+    { code: 'ng', name: 'Nigeria' },
+    { code: 'ke', name: 'Kenya' },
+    { code: 'gh', name: 'Ghana' },
+    { code: 'za', name: 'South Africa' },
+    { code: 'eg', name: 'Egypt' },
+    { code: 'rw', name: 'Rwanda' },
+    { code: 'tz', name: 'Tanzania' },
+    { code: 'ug', name: 'Uganda' },
+    { code: 'ci', name: "Côte d'Ivoire" },
+    { code: 'sn', name: 'Senegal' },
+    { code: 'zm', name: 'Zambia' },
+    { code: 'et', name: 'Ethiopia' },
+  ]
+  const doubled = [...countries, ...countries]
 
   return (
     <section
@@ -12,19 +25,42 @@ export function TrustedBy() {
         padding: '28px 0',
       }}
     >
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/css/flag-icons.min.css"
+      />
       <p
         className="text-center mb-6"
         style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-60)', paddingLeft: '20px', paddingRight: '20px' }}
       >
-        Banking partners &amp; security
+        One platform, 54 countries
       </p>
       <div className="flex animate-marquee whitespace-nowrap" aria-hidden="true">
-        {doubled.map((logo, i) => (
+        {doubled.map((item, i) => (
           <span
             key={i}
-            style={{ display: 'inline-flex', alignItems: 'center', margin: '0 40px', fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: '18px', letterSpacing: '-0.02em', color: 'var(--navy)', opacity: 0.55 }}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '10px',
+              margin: '0 28px',
+              fontSize: '15px',
+              fontWeight: 500,
+              color: 'var(--navy)',
+              opacity: 0.75,
+            }}
           >
-            {logo}
+            <span
+              className={`fi fi-${item.code}`}
+              style={{
+                width: '28px',
+                height: '20px',
+                borderRadius: '3px',
+                boxShadow: '0 0 0 1px rgba(16,26,51,0.08)',
+                flexShrink: 0,
+              }}
+            />
+            <span style={{ fontFamily: 'var(--font-body)' }}>{item.name}</span>
           </span>
         ))}
       </div>

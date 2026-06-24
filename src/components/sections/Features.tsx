@@ -1,23 +1,17 @@
 'use client'
-import { motion, type Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Card } from '@/components/ui/Card'
-import { IconDeviceMobile, IconWallet, IconArrowsExchange, IconShieldCheck, IconChartBar } from '@tabler/icons-react'
+import { IconArrowsExchange, IconWallet, IconReceipt, IconShieldCheck, IconChartBar } from '@tabler/icons-react'
 
 const cards = [
   {
-    icon: <IconWallet size={28} />,
-    title: 'The Vault',
-    badge: 'Savings',
-    desc: 'Set a goal, name it, and Vaulta moves money there automatically. Earn 12% p.a. from day one. No minimums, no lockups.',
-  },
-  {
-    icon: <IconDeviceMobile size={28} />,
-    title: 'Buckets',
-    badge: 'Budgeting',
-    desc: 'Split your income the moment it lands. Rent, groceries, the fun fund — Vaulta does the math so you don\'t have to.',
-  },
-  {
     icon: <IconArrowsExchange size={28} />,
+    title: 'Africa Pay',
+    badge: 'Cross-Border',
+    desc: 'Send and receive across all 54 African countries. No SWIFT delays, no 8% FX loss — just settlement in minutes.',
+  },
+  {
+    icon: <IconReceipt size={28} />,
     title: 'Instant Transfers',
     badge: 'Send & Receive',
     desc: 'Send money to any Nigerian bank account in minutes. No wait, no wire fees, no fuss.',
@@ -26,13 +20,13 @@ const cards = [
     icon: <IconShieldCheck size={28} />,
     title: 'Bank-grade Security',
     badge: 'Security',
-    desc: 'NDIC insured up to ₦5M, biometric login, card freeze in a tap. Your money, watched over quietly.',
+    desc: 'NDIC insured up to ₦5M, biometric login, card freeze in a tap. Your trade, watched over quietly.',
   },
   {
     icon: <IconChartBar size={28} />,
     title: 'A Clearer Picture',
     badge: 'Insights',
-    desc: 'Weekly summaries that read like a postcard, not a spreadsheet. Know exactly where you stand.',
+    desc: 'Weekly summaries that read like a postcard, not a spreadsheet. Know exactly where every trade stands.',
   },
 ]
 
@@ -40,16 +34,9 @@ const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.12 } },
 }
-const item: Variants = {
+const item = {
   hidden: { opacity: 0, y: 24 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.34, 1.56, 0.64, 1] as [number, number, number, number],
-    },
-  },
+  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.34, 1.56, 0.64, 1] } },
 }
 
 export function Features() {
@@ -71,12 +58,12 @@ export function Features() {
               What&apos;s inside
             </p>
             <h2 style={{ fontFamily: 'var(--font-bricolage)', fontWeight: 700, fontSize: 'clamp(28px, 3.5vw, 56px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: 'var(--navy)', margin: 0 }}>
-              A whole financial life,<br />in one calm place.
+              One platform,<br />every African corridor.
             </h2>
           </div>
           <div className="flex-1">
             <p style={{ fontSize: 'clamp(15px, 2vw, 20px)', lineHeight: 1.5, color: 'var(--ink-60)', maxWidth: '400px' }}>
-              Everything you&apos;d want from a bank, none of the noise you wouldn&apos;t.
+              Everything a business needs to trade across the continent, none of the noise it doesn&apos;t.
             </p>
           </div>
         </div>
